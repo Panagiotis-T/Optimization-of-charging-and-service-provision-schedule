@@ -1,2 +1,2 @@
 # Optimization_project
-This project is all about optimization the charging and service provision schedule or electric vehicles based on their availability and grid's frequency
+This project is all about optimization the charging and service provision schedule or electric vehicles depending on their availability, the grid's frequency and they market price at each hour.
