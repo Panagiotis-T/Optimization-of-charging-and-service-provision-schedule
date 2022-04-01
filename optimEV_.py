@@ -114,12 +114,6 @@ opt_model.addConstrs((SOC[(t+1,v)] == SOC[(t,v)]
                       for v in Vehicles),
                      name="constraint7_{0}_{1}")
 
-## avoid parallel charge and discharge
-# opt_model.addConstrs((Pcharge[t,v] >= charge_switch[t,v] * Pmin for t in T for v in Vehicles))
-# opt_model.addConstrs((Pcharge[t,v] <= charge_switch[t,v] * Pmax for t in T for v in Vehicles))
-# opt_model.addConstrs((Pdis[t,v] >= discharge_switch[t,v] * Pmin for t in T for v in Vehicles))
-# opt_model.addConstrs((Pdis[t,v] <= discharge_switch[t,v] * Pmax for t in T for v in Vehicles))
-# opt_model.addConstrs((charge_switch[t,v] + discharge_switch[t,v] <= 1 for t in T for v in Vehicles))
 
 ## avoid driving and providing services at the same time
 opt_model.addConstrs((Pcap[t,v] >= Pcap_switch[t,v] * Pmin for t in T for v in Vehicles))
